@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Success Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Student Success Dashboard</h1>
+
+    <div class="gpa-box">
+        <h2>Current GPA:</h2>
+        <p id="gpaDisplay">0.00</p>
+    </div>
+
+    <div class="input-section">
+        <h3>Add a Class</h3>
+        <input type="text" id="className" placeholder="Class Name">
+        <input type="number" id="classGrade" placeholder="Grade (0-100)">
+        <button onclick="addClass()">Add Class</button>
+        <button onclick="calculateGPA()">Calculate GPA</button>
+    </div>
+
+    <div class="class-list">
+        <h3>Your Classes</h3>
+        <ul id="classList"></ul>
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
