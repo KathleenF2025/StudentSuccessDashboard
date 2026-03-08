@@ -3,28 +3,81 @@ body {
     background-color: #1e1e2f;
     color: white;
     text-align: center;
+    margin: 0;
+    padding: 20px;
 }
 
+h1 {
+    margin-bottom: 10px;
+}
+
+/* GPA Box */
 .gpa-box {
     background-color: #2e2e4d;
     padding: 20px;
     margin: 20px auto;
-    width: 300px;
+    width: 350px;
     border-radius: 10px;
 }
 
 #gpaDisplay {
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Transcript Section */
+.class-list {
+    background-color: #2e2e4d;
+    padding: 15px;
+    margin: 20px auto;
+    width: 350px;
+    border-radius: 10px;
+}
+
+.class-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.class-list li {
+    padding: 8px;
+    border-bottom: 1px solid #444;
+}
+
+.class-list li:last-child {
+    border-bottom: none;
+}
+
+/* Input Section */
+.input-section {
+    background-color: #2e2e4d;
+    padding: 20px;
+    margin: 20px auto;
+    width: 350px;
+    border-radius: 10px;
 }
 
 input {
     padding: 8px;
     margin: 5px;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
 }
 
 button {
-    padding: 8px 12px;
+    padding: 8px 15px;
     margin: 5px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    background-color: #4c6ef5;
+    color: white;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #3b5bdb;
 }
