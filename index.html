@@ -8,22 +8,27 @@
 
     <h1>Student Success Dashboard</h1>
 
+    <!-- GPA DISPLAY -->
     <div class="gpa-box">
-        <h2>Current GPA:</h2>
+        <h2>Current GPA</h2>
         <p id="gpaDisplay">0.00</p>
     </div>
 
+    <!-- CLASS LIST (Transcript Style) -->
+    <div class="class-list">
+        <h3>Transcript</h3>
+        <ul id="classList"></ul>
+    </div>
+
+    <!-- ADD CLASS SECTION -->
     <div class="input-section">
         <h3>Add a Class</h3>
         <input type="text" id="className" placeholder="Class Name">
         <input type="number" id="classGrade" placeholder="Grade (0-100)">
+        <br>
         <button onclick="addClass()">Add Class</button>
+        <br><br>
         <button onclick="calculateGPA()">Calculate GPA</button>
-    </div>
-
-    <div class="class-list">
-        <h3>Your Classes</h3>
-        <ul id="classList"></ul>
     </div>
 
 <script src="script.js"></script>
