@@ -18,13 +18,21 @@ function addClass() {
 }
 
 function displayClasses() {
-    let list = document.getElementById("classList");
-    list.innerHTML = "";
+    let classRow = document.getElementById("classRow");
+    let gradeRow = document.getElementById("gradeRow");
+
+    classRow.innerHTML = "";
+    gradeRow.innerHTML = "";
 
     for (let i = 0; i < classes.length; i++) {
-        let li = document.createElement("li");
-        li.textContent = classes[i].name + " - " + classes[i].grade;
-        list.appendChild(li);
+        let classCell = document.createElement("th");
+        classCell.textContent = classes[i].name;
+
+        let gradeCell = document.createElement("td");
+        gradeCell.textContent = classes[i].grade;
+
+        classRow.appendChild(classCell);
+        gradeRow.appendChild(gradeCell);
     }
 }
 
@@ -42,7 +50,6 @@ function calculateGPA() {
 
     let average = total / classes.length;
 
-    // Simple GPA scale
     let gpa = (average / 100) * 4;
 
     document.getElementById("gpaDisplay").textContent = gpa.toFixed(2);
