@@ -1,15 +1,19 @@
 let classes = [];
 
 function addClass() {
-    let name = document.getElementById("className").value.trim();
-    let grade = parseFloat(document.getElementById("classGrade").value);
+    let nameInput = document.getElementById("className");
+    let gradeInput = document.getElementById("classGrade");
 
-    if (name === "" || isNaN(grade)) {
-        alert("Please enter a valid class and grade.");
+    let name = nameInput.value.trim();
+    let grade = parseFloat(gradeInput.value);
+
+    // Validation
+    if (name === "" || isNaN(grade) || grade < 0 || grade > 100) {
+        alert("Please enter a valid class name and a grade between 0 and 100.");
         return;
     }
 
-    // Capitalize first letter of each word
+    // Capitalize first letter of every word
     name = name
         .toLowerCase()
         .split(" ")
@@ -20,8 +24,9 @@ function addClass() {
 
     displayClasses();
 
-    document.getElementById("className").value = "";
-    document.getElementById("classGrade").value = "";
+    // Clear inputs
+    nameInput.value = "";
+    gradeInput.value = "";
 }
 
 function displayClasses() {
