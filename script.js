@@ -1,13 +1,20 @@
 let classes = [];
 
 function addClass() {
-    let name = document.getElementById("className").value;
+    let name = document.getElementById("className").value.trim();
     let grade = parseFloat(document.getElementById("classGrade").value);
 
     if (name === "" || isNaN(grade)) {
         alert("Please enter a valid class and grade.");
         return;
     }
+
+    // Capitalize first letter of each word
+    name = name
+        .toLowerCase()
+        .split(" ")
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
 
     classes.push({ name: name, grade: grade });
 
