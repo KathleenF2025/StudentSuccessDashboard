@@ -17,20 +17,30 @@
     <!-- TRANSCRIPT TABLE -->
     <div class="class-list">
         <h3>Transcript</h3>
-        <table id="transcriptTable">
+        <table>
             <tr id="classRow"></tr>
             <tr id="gradeRow"></tr>
             <tr id="deleteRow"></tr>
         </table>
     </div>
 
-    <!-- ADD CLASS SECTION -->
+    <!-- ADD CLASS -->
     <div class="input-section">
         <h3>Add a Class</h3>
         <input type="text" id="className" placeholder="Class Name">
         <input type="number" id="classGrade" placeholder="Grade (0-100)">
         <br>
         <button onclick="addClass()">Add Class</button>
+    </div>
+
+    <!-- WHAT IF SIMULATOR -->
+    <div class="what-if-section">
+        <h3>What-If GPA Simulator</h3>
+        <select id="whatIfClass"></select>
+        <input type="number" id="whatIfGrade" placeholder="New Grade (0-100)">
+        <br>
+        <button onclick="simulateGPA()">Simulate GPA</button>
+        <p id="simulatedGPA"></p>
     </div>
 
 <script src="script.js"></script>
