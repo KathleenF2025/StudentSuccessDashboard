@@ -1,5 +1,20 @@
 let classes = [];
 
+// LOAD DATA ON PAGE START
+window.onload = function () {
+    let savedData = localStorage.getItem("savedClasses");
+
+    if (savedData) {
+        classes = JSON.parse(savedData);
+        displayClasses();
+        calculateGPA();
+    }
+};
+
+function saveData() {
+    localStorage.setItem("savedClasses", JSON.stringify(classes));
+}
+
 function addClass() {
     let nameInput = document.getElementById("className");
     let gradeInput = document.getElementById("classGrade");
@@ -20,6 +35,7 @@ function addClass() {
 
     classes.push({ name, grade });
 
+    saveData();
     displayClasses();
     calculateGPA();
 
@@ -29,6 +45,7 @@ function addClass() {
 
 function deleteClass(index) {
     classes.splice(index, 1);
+    saveData();
     displayClasses();
     calculateGPA();
 }
@@ -86,7 +103,6 @@ function calculateGPA() {
 
     gpaDisplay.textContent = gpa.toFixed(2);
 
-    // Remove previous color classes
     gpaDisplay.classList.remove("low-gpa", "mid-gpa", "high-gpa");
 
     if (gpa < 2.5) {
