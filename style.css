@@ -24,6 +24,24 @@ h1 {
     font-weight: bold;
 }
 
+#gpaStatus {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* GPA Color Classes */
+.low-gpa {
+    color: #ff4d4d;
+}
+
+.mid-gpa {
+    color: #ffd43b;
+}
+
+.high-gpa {
+    color: #51cf66;
+}
+
 .class-list {
     background-color: #2e2e4d;
     padding: 20px;
