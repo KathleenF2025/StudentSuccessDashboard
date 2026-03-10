@@ -11,7 +11,6 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* GPA Box */
 .gpa-box {
     background-color: #2e2e4d;
     padding: 20px;
@@ -23,10 +22,8 @@ h1 {
 #gpaDisplay {
     font-size: 2.5em;
     font-weight: bold;
-    margin: 10px 0;
 }
 
-/* Transcript Section */
 .class-list {
     background-color: #2e2e4d;
     padding: 20px;
@@ -38,7 +35,6 @@ h1 {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
 }
 
 th, td {
@@ -46,18 +42,12 @@ th, td {
     text-align: center;
 }
 
-th {
-    font-weight: bold;
-    font-size: 1.1em;
-}
-
 td {
-    color: #bbb;
     border-top: 1px solid #444;
 }
 
-/* Input Section */
-.input-section {
+.input-section,
+.what-if-section {
     background-color: #2e2e4d;
     padding: 20px;
     margin: 20px auto;
@@ -65,19 +55,18 @@ td {
     border-radius: 10px;
 }
 
-input {
+input, select {
     padding: 8px;
     margin: 5px;
-    width: 80%;
     border-radius: 5px;
     border: none;
 }
 
 button {
-    padding: 8px 15px;
+    padding: 6px 10px;
     margin: 5px;
-    border: none;
     border-radius: 5px;
+    border: none;
     cursor: pointer;
     background-color: #4c6ef5;
     color: white;
@@ -85,5 +74,5 @@ button {
 }
 
 button:hover {
-    background-color: #3b5bdb;
+    opacity: 0.8;
 }
