@@ -12,7 +12,6 @@ function addClass() {
         return;
     }
 
-    // Capitalize each word
     name = name
         .toLowerCase()
         .split(" ")
@@ -69,8 +68,13 @@ function displayClasses() {
 }
 
 function calculateGPA() {
+    let gpaDisplay = document.getElementById("gpaDisplay");
+    let gpaStatus = document.getElementById("gpaStatus");
+
     if (classes.length === 0) {
-        document.getElementById("gpaDisplay").textContent = "0.00";
+        gpaDisplay.textContent = "0.00";
+        gpaStatus.textContent = "";
+        gpaDisplay.className = "";
         return;
     }
 
@@ -80,7 +84,21 @@ function calculateGPA() {
     let average = total / classes.length;
     let gpa = (average / 100) * 4;
 
-    document.getElementById("gpaDisplay").textContent = gpa.toFixed(2);
+    gpaDisplay.textContent = gpa.toFixed(2);
+
+    // Remove previous color classes
+    gpaDisplay.classList.remove("low-gpa", "mid-gpa", "high-gpa");
+
+    if (gpa < 2.5) {
+        gpaDisplay.classList.add("low-gpa");
+        gpaStatus.textContent = "Academic Warning";
+    } else if (gpa < 3.5) {
+        gpaDisplay.classList.add("mid-gpa");
+        gpaStatus.textContent = "Good Standing";
+    } else {
+        gpaDisplay.classList.add("high-gpa");
+        gpaStatus.textContent = "Honor Roll Level";
+    }
 }
 
 function updateDropdown() {
